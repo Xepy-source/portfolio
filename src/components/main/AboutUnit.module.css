@@ -1,0 +1,27 @@
+.about_unit_wrap {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_unit_wrap > svg {
+  color: #149ddd;
+}
+
+.text_wrap {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.text_wrap > span:first-child {
+  font-weight: bold;
+}
+
+.text_wrap > span {
+  white-space: pre-line;
+}
