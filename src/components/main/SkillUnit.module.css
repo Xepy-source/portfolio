@@ -1,0 +1,10 @@
+.skill_unit_wrap {
+  position: absolute;
+  height: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border-radius: 5px;
+}

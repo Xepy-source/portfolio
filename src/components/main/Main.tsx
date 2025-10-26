@@ -1,7 +1,10 @@
 import style from "./Main.module.css";
 import { ReactTyped } from "react-typed";
 import AboutUnit from "./AboutUnit";
-import { aboutList } from "../../fieldDataList";
+import { aboutList, skillList } from "../../fieldDataList";
+import { FaArrowLeftLong, FaArrowRightLong, FaGithub } from "react-icons/fa6";
+import SkillUnit from "./SkillUnit";
+import { useCallback } from "react";
 
 export default function Main() {
   const introduce =
@@ -16,7 +19,7 @@ export default function Main() {
           <ReactTyped strings={["저는 웹 개발자 입니다."]} typeSpeed={200} backSpeed={100} loop={true} />
         </div>
       </div>
-      <div className={`${style.main_about_wrap} About`}>
+      <div className={`${style.main_title_wrap} ${style.main_about_wrap} About`}>
         <span className={style.sub_title}>About</span>
         <div className={style.empty_border}></div>
         <span style={{ whiteSpace: "pre-line" }}>{introduce}</span>
@@ -26,8 +29,45 @@ export default function Main() {
           })}
         </div>
       </div>
-      <div className={`${style.main_skills_wrap} Skills`}>
+      <div className={`${style.main_title_wrap} ${style.main_skills_wrap} Skills`}>
         <span className={style.sub_title}>Skills</span>
+        <div className={style.empty_border}></div>
+        <div className={style.skills_view_wrap}>
+          {skillList.map((el, idx) => {
+            return (
+              <SkillUnit
+                key={idx}
+                icon={el.icon}
+                skillName={el.name}
+                top={el.top}
+                left={el.left}
+                color={el.color}
+                backgroundColor={el.backgroundColor}
+              />
+            );
+          })}
+          <div className={style.skills_level_degree_wrap}>
+            <div className={style.skill_level_degree}>
+              <FaArrowLeftLong />
+              <span>Low Level</span>
+            </div>
+            <div className={style.skill_level_degree}>
+              <span>High Level</span>
+              <FaArrowRightLong />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={`${style.main_title_wrap} ${style.main_git_wrap} Git`}>
+        <span className={style.sub_title}>Git</span>
+        <div className={style.empty_border}></div>
+        <div className={style.github_address_wrap} onClick={() => window.open("https://github.com/Xepy-source")}>
+          <FaGithub size={100} />
+          <span>GitHub</span>
+        </div>
+      </div>
+      <div className={`${style.main_title_wrap} ${style.main_career_wrap} Career`}>
+        <span className={style.sub_title}>Career</span>
         <div className={style.empty_border}></div>
       </div>
     </div>
