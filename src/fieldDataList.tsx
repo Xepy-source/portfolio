@@ -1,5 +1,21 @@
-import { FaUser, FaReact, FaJenkins, FaDocker, FaGitlab, FaJava, FaAws } from "react-icons/fa";
-import { IoHomeOutline, IoMail, IoLocationSharp, IoSchoolSharp, IoCalendar, IoLogoJavascript } from "react-icons/io5";
+import {
+  FaUser,
+  FaReact,
+  FaJenkins,
+  FaDocker,
+  FaGitlab,
+  FaJava,
+  FaAws,
+} from "react-icons/fa";
+import {
+  IoHomeOutline,
+  IoMail,
+  IoLocationSharp,
+  IoSchoolSharp,
+  IoCalendar,
+  IoLogoJavascript,
+} from "react-icons/io5";
+import { RiPhpFill } from "react-icons/ri";
 import { AiOutlineUser, AiOutlinePython } from "react-icons/ai";
 import { VscTools } from "react-icons/vsc";
 import { GrMysql } from "react-icons/gr";
@@ -7,6 +23,9 @@ import { TbBrandTypescript } from "react-icons/tb";
 import { SiFastapi, SiSpringboot } from "react-icons/si";
 import { PiGithubLogo, PiBuildingOfficeLight } from "react-icons/pi";
 import { DiNginx } from "react-icons/di";
+
+export const introduce =
+  "저는 안정적인 Java/Spring 환경부터 최신 Python/FastAPI 스택까지, 다양한 기술을 활용해 서비스를 구축하고 개발해 온 웹 개발자 설승훈입니다. \n저는 동료가 쉽게 이해할 수 있는 깨끗한 코드를 지향하며, 비즈니스 문제를 해결하기 위해 효율적인 기술을 탐구하고 적용하려고 노력합니다.";
 
 export const menuItemList = [
   {
@@ -39,7 +58,8 @@ const diffMonth = Math.round((diffDays % 365) / 30);
 const yearMonth = diffYears + "년 " + diffMonth + "개월";
 
 const birthDate = new Date("1993-01-18");
-const birthDiffDays = (now.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24);
+const birthDiffDays =
+  (now.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24);
 const birthDiffYears = Math.floor(birthDiffDays / 365);
 
 export const aboutList = [
@@ -181,11 +201,65 @@ export const skillList = [
     backgroundColor: "#D33834",
   },
   {
+    icon: <RiPhpFill size={20} />,
+    name: "php",
+    top: 25,
+    left: 28,
+    color: "white",
+    backgroundColor: "#474A8A",
+  },
+  {
     icon: <DiNginx size={60} />,
     // name: "Nginx",
     top: 55,
     left: 26,
     color: "white",
     backgroundColor: "#43A047",
+  },
+];
+
+export const careerList = [
+  {
+    title: "자격증 취득",
+    date: "2018-08",
+    content: "정보처리기사",
+  },
+  {
+    title: "금오공과대학교",
+    date: "2020-02",
+    content: "컴퓨터공학과 졸업",
+  },
+  {
+    title: "코리아 it 아카데미",
+    date: "2020-11 ~ 2021-04",
+    content: "웹 프로그래밍 백엔드 과정 수료",
+  },
+  {
+    title: "드림아이디어소프트",
+    date: "2021-05 ~ 2022-07",
+    content: `시골투어 웹 사이트 백엔드(Java) 보수작업,
+              시골투어 모바일 사이트 백엔드(Java) 및 동적페이지(JSP, JavaScript) 제작,
+              세일투나잇 앱(AOS, iOS - 웹뷰)및 웹(php) 고도화 작업 및 유지보수,
+              자립해냄 백엔드(Java) 및 동적페이지(JSP, JavaScript) 제작,
+              자립해냄 앱(AOS, iOS - 웹뷰) 제작`,
+  },
+  {
+    title: "나라지식정보",
+    date: "2022-07 ~ (재직중)",
+    content: `고전문서 OCR 프로젝트 관리자 페이지 및 회원 기능
+              근대문서 OCR 및 현대문서 OCR 작업 페이지
+              OCR 프로젝트 유지보수 및 고도화
+
+              프론트엔드 (React + Typescript)
+              백엔드 (Python - FastAPI)
+              DB (MariaDB)
+              협업툴 - GitLab
+
+              서버 세팅
+              - 형상관리 : GitLab
+              - 빌드 및 배포 : Jenkins
+              - 모니터링 : Zabbix
+              - 정적분석 : Sonarqube
+              - 배포 및 구동 : Docker`,
   },
 ];

@@ -7,7 +7,7 @@
 }
 
 .about_unit_wrap > svg {
-  color: #149ddd;
+  color: var(--foint-color);
 }
 
 .text_wrap {

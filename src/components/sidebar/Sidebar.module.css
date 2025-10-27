@@ -1,14 +1,41 @@
+@media screen and (min-width: 1400px) and (max-width: 1699px) {
+  .sidebar_container {
+    left: -300px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .sidebar_container {
+    left: 0;
+  }
+  .hambuger_button_wrap {
+    display: none;
+  }
+}
+
 .sidebar_container {
   width: 300px;
-  height: calc(100vh - 50px);
+  height: 100%;
   background-color: #040b14;
-  color: white;
+  color: var(--white-font-color);
   position: fixed;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+  z-index: 5;
+  transition: left 0.5s ease-out;
+}
+
+.sidebar_view {
+  left: 0;
+}
+
+.hambuger_button_wrap {
+  position: absolute;
+  top: 10px;
+  left: 310px;
+  width: 300px;
 }
 
 .logo_wrap {
@@ -55,9 +82,9 @@
 
 .menu_mouse_over > svg,
 .clicked_menu > svg {
-  color: #149ddd;
+  color: var(--foint-color);
 }
 .menu_mouse_over > span,
 .clicked_menu > span {
-  color: white;
+  color: var(--white-font-color);
 }

@@ -1,0 +1,35 @@
+.carrer_item_container {
+  padding: 0px 0px 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--foint-color);
+  position: relative;
+}
+
+.carrer_item_container::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -11px;
+  top: 0px;
+  background: var(--background-color);
+  border: 2px solid var(--foint-color);
+}
+
+.career_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--foint-color);
+}
+
+.career_date {
+  margin-left: 20px;
+  color: #ccc;
+}
+
+.career_content {
+  margin-top: 10px;
+  white-space: pre-line;
+  padding-bottom: 20px;
+}
