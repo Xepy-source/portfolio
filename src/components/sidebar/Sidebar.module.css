@@ -24,14 +24,8 @@
   height: 100%;
 }
 
-.title_wrap {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 .title_nickname {
+  margin-top: 20px;
   font-size: 1.7rem;
   font-weight: bold;
 }
@@ -59,9 +53,11 @@
   font-size: 20px;
 }
 
-.menu_mouse_over > svg {
+.menu_mouse_over > svg,
+.clicked_menu > svg {
   color: #149ddd;
 }
-.menu_mouse_over > span {
+.menu_mouse_over > span,
+.clicked_menu > span {
   color: white;
 }
