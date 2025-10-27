@@ -11,13 +11,14 @@
 }
 
 .main_container {
-  transition: margin 0.5s ease-out;
+  height: 100vh;
+  transition: margin 0.2s ease-out;
 }
 
 .main_home_wrap {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .main_home_wrap > img {
@@ -135,5 +136,6 @@
 }
 
 .career_items_wrap {
+  margin-left: 10%;
   padding-left: 20px;
 }

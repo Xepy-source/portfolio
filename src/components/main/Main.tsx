@@ -9,19 +9,22 @@ import {
 } from "../../fieldDataList";
 import { FaArrowLeftLong, FaArrowRightLong, FaGithub } from "react-icons/fa6";
 import SkillUnit from "./SkillUnit";
-import { useCallback, useEffect } from "react";
+import { useEffect } from "react";
 import { useMenuStore } from "../../store/useMenuStore";
 import CareerItem from "./CareerItem";
 
 export default function Main() {
-  const { clickMenu } = useMenuStore();
+  const { clickMenu, type, setType } = useMenuStore();
 
   useEffect(() => {
-    const target = document.getElementsByClassName(
-      clickMenu
-    )[0] as HTMLDivElement;
-    target.scrollIntoView({ behavior: "smooth" });
-  }, [clickMenu]);
+    if (type === "click") {
+      const target = document.getElementsByClassName(
+        clickMenu
+      )[0] as HTMLDivElement;
+      target.scrollIntoView({ behavior: "smooth" });
+      setType("");
+    }
+  }, [clickMenu, type, setType]);
 
   return (
     <div className={style.main_container}>

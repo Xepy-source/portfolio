@@ -1,3 +1,16 @@
+@media screen and (min-width: 1700px) {
+  .hambuger_button_wrap {
+    display: none;
+  }
+}
+
+.hambuger_button_wrap {
+  position: absolute;
+  top: 10px;
+  left: 310px;
+  width: 300px;
+}
+
 .burger {
   position: relative;
   width: 40px;
