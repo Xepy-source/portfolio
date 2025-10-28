@@ -24,8 +24,8 @@ import { SiFastapi, SiSpringboot } from "react-icons/si";
 import { PiGithubLogo, PiBuildingOfficeLight } from "react-icons/pi";
 import { DiNginx } from "react-icons/di";
 
-export const introduce =
-  "저는 안정적인 Java/Spring 환경부터 최신 Python/FastAPI 스택까지, 다양한 기술을 활용해 서비스를 구축하고 개발해 온 웹 개발자 설승훈입니다. \n저는 동료가 쉽게 이해할 수 있는 깨끗한 코드를 지향하며, 비즈니스 문제를 해결하기 위해 효율적인 기술을 탐구하고 적용하려고 노력합니다.";
+export const introduce = `저는 안정적인 Java/Spring 환경부터 최신 Python/FastAPI 스택까지, 다양한 기술을 활용해 서비스를 구축하고 개발해 온 웹 개발자 설승훈입니다. 
+  저는 동료가 쉽게 이해할 수 있는 깨끗한 코드를 지향하며, 비즈니스 문제를 해결하기 위해 효율적인 기술을 탐구하고 적용하려고 노력합니다.`;
 
 export const menuItemList = [
   {
@@ -121,6 +121,14 @@ export const skillList = [
     backgroundColor: "#f0db4f",
   },
   {
+    icon: <SiFastapi size={20} />,
+    name: "fastAPI",
+    top: 25,
+    left: 60,
+    color: "white",
+    backgroundColor: "#009485",
+  },
+  {
     icon: <AiOutlinePython size={20} />,
     name: "python",
     top: 55,
@@ -129,12 +137,20 @@ export const skillList = [
     backgroundColor: "#FFD43B",
   },
   {
-    icon: <SiFastapi size={20} />,
-    name: "fastAPI",
-    top: 25,
-    left: 60,
+    icon: <FaGitlab size={20} />,
+    name: "Gitlab",
+    top: 15,
+    left: 47,
     color: "white",
-    backgroundColor: "#009485",
+    backgroundColor: "#E2432A",
+  },
+  {
+    icon: <PiGithubLogo size={20} />,
+    name: "Github",
+    top: 40,
+    left: 47,
+    color: "white",
+    backgroundColor: "black",
   },
   {
     icon: <GrMysql size={20} />,
@@ -161,20 +177,20 @@ export const skillList = [
     backgroundColor: "#1D63ED",
   },
   {
-    icon: <PiGithubLogo size={20} />,
-    name: "Github",
-    top: 40,
-    left: 47,
+    icon: <RiPhpFill size={20} />,
+    name: "php",
+    top: 25,
+    left: 28,
     color: "white",
-    backgroundColor: "black",
+    backgroundColor: "#474A8A",
   },
   {
-    icon: <FaGitlab size={20} />,
-    name: "Gitlab",
-    top: 15,
-    left: 47,
+    icon: <DiNginx size={60} />,
+    // name: "Nginx",
+    top: 55,
+    left: 26,
     color: "white",
-    backgroundColor: "#E2432A",
+    backgroundColor: "#43A047",
   },
   {
     icon: <SiSpringboot size={20} />,
@@ -199,22 +215,6 @@ export const skillList = [
     left: 5,
     color: "white",
     backgroundColor: "#D33834",
-  },
-  {
-    icon: <RiPhpFill size={20} />,
-    name: "php",
-    top: 25,
-    left: 28,
-    color: "white",
-    backgroundColor: "#474A8A",
-  },
-  {
-    icon: <DiNginx size={60} />,
-    // name: "Nginx",
-    top: 55,
-    left: 26,
-    color: "white",
-    backgroundColor: "#43A047",
   },
 ];
 

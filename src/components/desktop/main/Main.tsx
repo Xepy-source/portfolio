@@ -1,31 +1,17 @@
 import style from "./Main.module.css";
 import { ReactTyped } from "react-typed";
-import AboutUnit from "./AboutUnit";
+import AboutUnit from "../../common/AboutUnit";
 import {
   introduce,
   aboutList,
   skillList,
   careerList,
-} from "../../fieldDataList";
+} from "../../../fieldDataList";
 import { FaArrowLeftLong, FaArrowRightLong, FaGithub } from "react-icons/fa6";
 import SkillUnit from "./SkillUnit";
-import { useEffect } from "react";
-import { useMenuStore } from "../../store/useMenuStore";
-import CareerItem from "./CareerItem";
+import CareerItem from "../../common/CareerItem";
 
 export default function Main() {
-  const { clickMenu, type, setType } = useMenuStore();
-
-  useEffect(() => {
-    if (type === "click") {
-      const target = document.getElementsByClassName(
-        clickMenu
-      )[0] as HTMLDivElement;
-      target.scrollIntoView({ behavior: "smooth" });
-      setType("");
-    }
-  }, [clickMenu, type, setType]);
-
   return (
     <div className={style.main_container}>
       <div className={`${style.main_home_wrap} Home`}>
@@ -114,6 +100,7 @@ export default function Main() {
                 title={el.title}
                 date={el.date}
                 content={el.content}
+                width={100}
               />
             );
           })}

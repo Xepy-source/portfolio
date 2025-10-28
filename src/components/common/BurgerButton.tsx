@@ -1,13 +1,14 @@
-import buttonStyle from "./Button.module.css";
+import buttonStyle from "./BurgerButton.module.css";
 
 interface props {
   isOpen: boolean;
   setIsOpen(value: boolean): void;
+  color: string;
 }
 
-export default function BurgerButton({ isOpen, setIsOpen }: props) {
+export default function BurgerButton({ isOpen, setIsOpen, color }: props) {
   return (
-    <div className={buttonStyle.hambuger_button_wrap}>
+    <div>
       <div
         className={buttonStyle.burger}
         onClick={() => setIsOpen(!isOpen)}
@@ -16,14 +17,17 @@ export default function BurgerButton({ isOpen, setIsOpen }: props) {
         <span
           className={`${isOpen ? buttonStyle.line_first : ""}`}
           aria-hidden="true"
+          style={{ backgroundColor: color }}
         />
         <span
           className={`${isOpen ? buttonStyle.line_second : ""}`}
           aria-hidden="true"
+          style={{ backgroundColor: color }}
         />
         <span
           className={`${isOpen ? buttonStyle.line_last : ""}`}
           aria-hidden="true"
+          style={{ backgroundColor: color }}
         />
       </div>
     </div>

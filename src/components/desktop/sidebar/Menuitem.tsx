@@ -1,6 +1,6 @@
 import { useState } from "react";
 import style from "./Sidebar.module.css";
-import { useMenuStore } from "../../store/useMenuStore";
+import { useMenuStore } from "../../../store/useMenuStore";
 
 interface props {
   icon: React.ReactNode;
@@ -14,9 +14,7 @@ export default function Menuitem({ icon, itemName, handleClickFunc }: props) {
 
   return (
     <div
-      className={`${style.menu_item} ${isOver ? style.menu_mouse_over : ""} ${
-        clickMenu === itemName ? style.clicked_menu : ""
-      }`}
+      className={`${style.menu_item} ${isOver ? style.menu_mouse_over : ""}`}
       onMouseOver={() => setIsOver(true)}
       onMouseOut={() => setIsOver(false)}
       onClick={() => handleClickFunc(itemName, "click")}

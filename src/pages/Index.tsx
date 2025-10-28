@@ -1,15 +1,12 @@
 import style from "./Index.module.css";
-import Sidebar from "../components/sidebar/Sidebar";
-import Main from "../components/main/Main";
-import MobileMain from "../components/mobile/Main";
 import { useMediaQuery } from "react-responsive";
-import { useEffect, useState } from "react";
-import { useMenuStore } from "../store/useMenuStore";
+import Sidebar from "../components/desktop/sidebar/Sidebar";
+import Main from "../components/desktop/main/Main";
+import TopMenuBar from "../components/mobile/topmenu/TopMenuBar";
+import MobileMain from "../components/mobile/main/Main";
+import { useEffect } from "react";
 
 export default function Index() {
-  const [scrollY, setScrollY] = useState<number>(0);
-  const { setClickMenu } = useMenuStore();
-
   const isDesktop: boolean = useMediaQuery({
     query: "(min-width:1400px)",
   });
@@ -17,26 +14,29 @@ export default function Index() {
     query: "(max-width:1399px)",
   });
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
+    const element = document.querySelector(
+      '[aria-label="Open React Query Devtools"]'
+    );
+    if (element) {
+      element.remove();
+    }
+  }, []);
 
   return (
     <div className={style.index_container}>
-      {/* {isDesktop && ( */}
-      <>
-        <Sidebar />
-        <Main />
-      </>
-      {/* )} */}
-      {/* {isMobile && <MobileMain />} */}
+      {isDesktop && (
+        <>
+          <Sidebar />
+          <Main />
+        </>
+      )}
+      {isMobile && (
+        <>
+          <TopMenuBar />
+          <MobileMain />
+        </>
+      )}
     </div>
   );
 }

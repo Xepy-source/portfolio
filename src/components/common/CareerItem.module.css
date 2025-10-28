@@ -29,6 +29,7 @@
 }
 
 .career_content {
+  width: 95%;
   margin-top: 10px;
   white-space: pre-line;
   padding-bottom: 20px;

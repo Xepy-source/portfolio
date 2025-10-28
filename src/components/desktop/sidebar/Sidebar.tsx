@@ -1,21 +1,27 @@
 import style from "./Sidebar.module.css";
 import Menuitem from "./Menuitem";
-import BurgerButton from "./BurgerButton";
-import { useMenuStore } from "../../store/useMenuStore";
-import { menuItemList } from "../../fieldDataList";
-import { useCallback, useState } from "react";
+import BurgerButton from "../../common/BurgerButton";
+import { useMenuStore } from "../../../store/useMenuStore";
+import { menuItemList } from "../../../fieldDataList";
+import { useCallback, useState, useEffect } from "react";
 
 export default function Sidebar() {
-  const { setClickMenu, setType } = useMenuStore();
+  const { clickMenu, setClickMenu } = useMenuStore();
   const [isOpen, setIsOpen] = useState(true);
 
   const handleClickMenu = useCallback(
-    (value: string, type: string) => {
+    (value: string) => {
       setClickMenu(value);
-      setType(type);
     },
-    [setClickMenu, setType]
+    [setClickMenu]
   );
+
+  useEffect(() => {
+    const target = document.getElementsByClassName(
+      clickMenu
+    )[0] as HTMLDivElement;
+    target.scrollIntoView({ behavior: "smooth" });
+  }, [clickMenu]);
 
   return (
     <div
@@ -23,7 +29,9 @@ export default function Sidebar() {
         isOpen ? style.sidebar_view : ""
       }`}
     >
-      <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className={style.hambuger_button_wrap}>
+        <BurgerButton isOpen={isOpen} setIsOpen={setIsOpen} color={"#ccc"} />
+      </div>
       <div className={style.logo_wrap}>
         <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
       </div>
