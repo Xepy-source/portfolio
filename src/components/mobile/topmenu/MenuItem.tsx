@@ -1,9 +1,8 @@
-import style from "./MenuItem.module.css";
-
 interface props {
   itemName: string;
+  handleClickMenu(value: string): void;
 }
 
-export default function Menuitem({ itemName }: props) {
-  return <div>{itemName}</div>;
+export default function Menuitem({ itemName, handleClickMenu }: props) {
+  return <span onClick={() => handleClickMenu(itemName)}>{itemName}</span>;
 }
