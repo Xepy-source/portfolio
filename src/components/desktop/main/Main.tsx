@@ -15,7 +15,7 @@ export default function Main() {
   return (
     <div className={style.main_container}>
       <div className={`${style.main_home_wrap} Home`}>
-        <img src={`${process.env.PUBLIC_URL}/background.png`} alt="" />
+        <img src={`${process.env.PUBLIC_URL}/background.jpg`} alt="" />
         <div className={style.main_img_span_wrap}>
           <span>Xepy</span>
           <ReactTyped
