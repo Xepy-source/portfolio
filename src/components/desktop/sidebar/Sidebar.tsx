@@ -20,7 +20,8 @@ export default function Sidebar() {
     const target = document.getElementsByClassName(
       clickMenu
     )[0] as HTMLDivElement;
-    target.scrollIntoView({ behavior: "smooth" });
+
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   }, [clickMenu]);
 
   return (
