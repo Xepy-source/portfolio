@@ -38,6 +38,9 @@
   padding-top: 30px;
   width: calc(100% - 20px);
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sub_title {
@@ -50,6 +53,13 @@
   height: 20px;
   border-bottom: 3px solid var(--foint-color);
   margin-bottom: 20px;
+}
+
+.item_wrap {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
 .about_intro {

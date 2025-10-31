@@ -7,7 +7,7 @@ import { useCallback, useState, useEffect } from "react";
 
 export default function Sidebar() {
   const { clickMenu, setClickMenu } = useMenuStore();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClickMenu = useCallback(
     (value: string) => {
