@@ -95,6 +95,39 @@ export const aboutList = [
   },
 ];
 
+export const mobileAboutList = [
+  {
+    icon: <FaUser size={40} />,
+    title: "이름",
+    content: "설승훈",
+  },
+  {
+    icon: <IoCalendar size={40} />,
+    title: "나이",
+    content: "만 " + birthDiffYears + "살",
+  },
+  {
+    icon: <IoLocationSharp size={40} />,
+    title: "위치",
+    content: "서울특별시 \n관악구",
+  },
+  {
+    icon: <IoCalendar size={40} />,
+    title: "경력",
+    content: yearMonth,
+  },
+  {
+    icon: <IoMail size={40} />,
+    title: "이메일",
+    content: "solnd3@\ngmail.com",
+  },
+  {
+    icon: <IoSchoolSharp size={40} />,
+    title: "학력",
+    content: "금오공과대학교 \n컴퓨터공학과",
+  },
+];
+
 export const skillList = [
   {
     icon: <FaReact size={20} />,

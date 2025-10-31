@@ -1,6 +1,6 @@
 import style from "./Main.module.css";
 import { ReactTyped } from "react-typed";
-import { aboutList, skillList, careerList } from "../../../fieldDataList";
+import { mobileAboutList, skillList, careerList } from "../../../fieldDataList";
 import { FaArrowUpLong, FaArrowDownLong, FaGithub } from "react-icons/fa6";
 import AboutUnit from "../../common/AboutUnit";
 import SkillUnit from "./SkillUnit";
@@ -28,7 +28,7 @@ export default function Main() {
           <span className={style.sub_title}>About</span>
           <div className={style.empty_border}></div>
           <div className={style.about_unit_container}>
-            {aboutList.map((el, idx) => {
+            {mobileAboutList.map((el, idx) => {
               return (
                 <AboutUnit
                   key={idx}
